@@ -1,0 +1,57 @@
+Arguments: 
+  /home/k3env/.volta/tools/image/node/18.12.1/bin/node /home/k3env/.volta/tools/image/yarn/1.22.19/bin/yarn.js install
+
+PATH: 
+  /home/k3env/.volta/tools/image/npm/9.1.2/bin:/home/k3env/.volta/tools/image/yarn/1.22.19/bin:/home/k3env/.volta/tools/image/node/18.12.1/bin:/home/k3env/.krew/bin:/home/k3env/.volta/bin:/home/k3env/.local/bin:/home/k3env/.krew/bin:/home/k3env/.volta/bin:/home/k3env/.local/bin:/home/k3env/.krew/bin:/home/k3env/.volta/bin:/home/k3env/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.12.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile '/home/k3env/.cache/yarn/v6/npm-estraverse-4.3.0-398ad3f3c5a24948be7725e83d11a7de28cdbd1d-integrity/node_modules/estraverse/.jshintrc' -> '/home/k3env/Projects/kube-apply/node_modules/@typescript-eslint/utils/node_modules/estraverse/.jshintrc'
+
+npm manifest: 
+  {
+    "name": "kube-apply",
+    "version": "1.0.0",
+    "description": "",
+    "type": "module",
+    "scripts": {
+      "dev": "npx nodemon -e ts",
+      "start": "node --no-warnings --loader ts-node/esm --experimental-specifier-resolution=node  --inspect src/main.ts",
+      "build": "npx tsc && npx tsc-alias -p tsconfig.json",
+      "bundle": "npx rollup dist/src/main.js --file dist/app.cjs --format cjs",
+      "postbuild": "npm run bundle"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "@types/js-yaml": "^4.0.5",
+      "@typescript-eslint/eslint-plugin": "^5.57.1",
+      "@typescript-eslint/parser": "^5.57.1",
+      "eslint": "^8.37.0",
+      "eslint-config-prettier": "^8.8.0",
+      "nodemon": "^2.0.22",
+      "prettier": "^2.8.7",
+      "rollup": "^3.20.2",
+      "ts-node": "^10.9.1",
+      "typescript": "^5.0.3"
+    },
+    "dependencies": {
+      "@kubernetes/client-node": "^0.18.1",
+      "js-yaml": "^4.1.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

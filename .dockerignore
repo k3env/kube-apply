@@ -1,0 +1,11 @@
+waypoint.hcl
+.waypoint
+node_modules
+.editorconfig
+.eslint*
+.git
+.gitignore
+.env
+deploy
+dist
+test

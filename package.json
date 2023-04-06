@@ -1,0 +1,32 @@
+{
+  "name": "kube-apply",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "dev": "npx nodemon -e ts",
+    "start": "node --no-warnings --loader ts-node/esm --experimental-specifier-resolution=node  --inspect src/main.ts",
+    "build": "npx tsc && npx tsc-alias -p tsconfig.json",
+    "bundle": "npx rollup dist/src/main.js --file dist/app.cjs --format cjs",
+    "postbuild": "npm run bundle"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.5",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.7",
+    "rollup": "^3.20.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.3"
+  },
+  "dependencies": {
+    "@kubernetes/client-node": "^0.18.1",
+    "js-yaml": "^4.1.0"
+  }
+}
